@@ -1,7 +1,7 @@
 # Stage 5: Tests and Validation
 
-- [ ] Add tests for catalog round-tripping.
-- [ ] Add tests for rclone setup detection.
-- [ ] Add tests for the command wrappers.
-- [ ] Add tests for MCP tool registration.
+- [x] Add tests for catalog round-tripping.
+- [x] Add tests for rclone setup detection.
+- [x] Add tests for the command wrappers.
+- [x] Add tests for MCP tool registration.
 - [ ] Run the skill validator on each skill folder.
