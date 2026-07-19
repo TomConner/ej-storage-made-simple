@@ -1,0 +1,4 @@
+interface:
+  display_name: "Storage Remove File"
+  short_description: "Remove one file and prune the catalog"
+  default_prompt: "Use $storage-remove-file to delete a document from an rclone storage folder and remove its `_catalog.jsonld` entry."

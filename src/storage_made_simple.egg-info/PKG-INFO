@@ -1,0 +1,65 @@
+Metadata-Version: 2.4
+Name: storage-made-simple
+Version: 0.1.0
+Summary: rclone-backed document catalog scaffolding
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+Requires-Dist: pyyaml>=6.0.3
+
+# storage-made-simple
+
+Use `rclone` to inspect and maintain catalogs for document folders stored in remote storage.
+
+## Scope
+
+- Maintain `_catalog.jsonld` in the same rclone folder as the documents.
+- Store `@context` as the rclone path for the folder.
+- Track one entry per file with `filename` and `tags`.
+- Support PDF, CSV, and Excel documents.
+- Keep catalog entries synchronized with folder contents and document-derived tags.
+
+## Rclone Rules
+
+- Require `rclone` to be installed and already configured by the user.
+- Detect setup before catalog operations.
+- Do not attempt to install, authenticate, or auto-configure `rclone`.
+- Treat every target as an rclone path, for example `tgod:_Money/CreditCard-AMEX/2026`.
+
+## Tagging Rules
+
+- Use normalized tags only.
+- Support these tag families:
+  - source tags like `from:irs` and `from:american-express`
+  - subject tags like `sub:alice`
+  - account tags like `account:checking`
+  - date tags like `date:2026-07-12`, `date:2026-03`, and `date:2025`
+  - tax-year tags like `taxyear:2025`
+  - form and schedule tags like `form:1040` and `schedule:c`
+  - document-type tags like `type:statement` and `type:tax-document`
+
+## Skill Split
+
+Keep the split below. Do not create an umbrella skill.
+
+- `skills/storage-catalog-folder`
+- `skills/storage-add-file`
+- `skills/storage-remove-file`
+- `skills/storage-replace-file`
+- `skills/storage-sync-catalog`
+
+## MCP / Code Scaffold
+
+- Keep the server scaffold in `src/storage_made_simple/`.
+- Keep executable command wrappers in `scripts/`.
+- Keep tests in `tests/`.
+- Keep stage checklists in `tasks/`.
+- Include rclone setup detection, but do not automate configuration.
+
+## Implementation Stages
+
+1. Define the catalog schema and tag normalization rules.
+2. Implement rclone detection and remote file listing.
+3. Implement catalog read/write and sync operations.
+4. Register the MCP-style tool surface and CLI scripts.
+5. Add tests for catalog serialization, rclone detection, and script dispatch.
+6. Validate each skill folder and keep the stage checklists current.

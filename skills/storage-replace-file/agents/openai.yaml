@@ -1,0 +1,4 @@
+interface:
+  display_name: "Storage Replace File"
+  short_description: "Replace a file and refresh its tags"
+  default_prompt: "Use $storage-replace-file to replace a document in an rclone storage folder and refresh its `_catalog.jsonld` entry."

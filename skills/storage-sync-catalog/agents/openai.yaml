@@ -1,0 +1,4 @@
+interface:
+  display_name: "Storage Sync Catalog"
+  short_description: "Reconcile folder contents with the catalog"
+  default_prompt: "Use $storage-sync-catalog to reconcile an rclone storage folder with `_catalog.jsonld`."

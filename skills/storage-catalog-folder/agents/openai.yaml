@@ -1,0 +1,4 @@
+interface:
+  display_name: "Storage Catalog Folder"
+  short_description: "Catalog an rclone storage folder"
+  default_prompt: "Use $storage-catalog-folder to catalog an rclone storage folder and create or refresh `_catalog.jsonld`."

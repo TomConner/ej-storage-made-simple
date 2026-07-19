@@ -1,0 +1,4 @@
+interface:
+  display_name: "Storage Add File"
+  short_description: "Add one file to a catalog entry"
+  default_prompt: "Use $storage-add-file to add a document to an rclone storage folder and update `_catalog.jsonld`."
