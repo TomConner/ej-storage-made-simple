@@ -6,7 +6,7 @@ build-backend = "setuptools.build_meta"
 name = "storage-made-simple"
 version = "0.1.0"
 description = "rclone-backed document catalog scaffolding"
-readme = "AGENTS.md"
+readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
     "pyyaml>=6.0.3",

@@ -1,4 +1,5 @@
 AGENTS.md
+README.md
 pyproject.toml
 src/storage_made_simple/__init__.py
 src/storage_made_simple/catalog.py

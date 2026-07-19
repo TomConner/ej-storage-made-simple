@@ -1,11 +1,3 @@
-Metadata-Version: 2.4
-Name: storage-made-simple
-Version: 0.1.0
-Summary: rclone-backed document catalog scaffolding
-Requires-Python: >=3.11
-Description-Content-Type: text/markdown
-Requires-Dist: pyyaml>=6.0.3
-
 # storage-made-simple
 
 `storage-made-simple` is a small rclone-backed catalog toolkit for document folders.
